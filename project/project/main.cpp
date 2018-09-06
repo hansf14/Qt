@@ -1,10 +1,11 @@
 #include <QApplication>
-#include "login_diag.h"
+#include "login.h"
+#include "mail_window.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    login_diag w;
+    login w;
     w.show();
     
     return a.exec();
