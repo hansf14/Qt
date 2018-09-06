@@ -1,5 +1,11 @@
 #include "compose.h"
 #include "ui_compose.h"
+#include <QFontDialog>
+#include <QFont>
+#include <QColorDialog>
+#include <QColor>
+#include <QMessageBox>
+#include <QFileDialog>
 
 compose::compose(QWidget *parent) :
     QMainWindow(parent),
@@ -44,7 +50,6 @@ void compose::on_actionFont_triggered()
     QFont font = QFontDialog::getFont(&ok, this);
     if (ok){
         ui->textEdit->setFont(font);
-
     }
     else return;
 }
@@ -69,12 +74,27 @@ void compose::on_actionText_Highlight_COlor_triggered()
 
 void compose::on_actionAbout_Us_triggered()
 {
-    QMessageBox message_box;
-    message_box.setText("We are Beijing Institute of Techonlogy student. \n We are majoring in Software Engineering.");
+    QMessageBox::information(this,"About Us","We are Beijing Institute of Techonlogy student. \n We are majoring in Software Engineering.");
 }
 
-void compose::on_actionAttach_triggered()
+void compose::on_cancel_pushButton_clicked()
+{
+    this->close();
+}
+
+void compose::on_actionAttachments_triggered()
 {
     QStringList filename = QFileDialog::getOpenFileNames(this, tr("Open File"), ("C://"),
                                                     "All Files (*.*);;Text File (*.txt);;Music Files (*.mp3)");
+}
+
+void compose::on_actionCancel_triggered()
+{
+    this->close();
+}
+
+void compose::on_actionNew_triggered()
+{
+    compose1 = new compose;
+    compose1->show();
 }

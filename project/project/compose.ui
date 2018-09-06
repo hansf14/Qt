@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>743</width>
-    <height>531</height>
+    <height>542</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Compose</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="to_label">
@@ -131,8 +131,8 @@
      <rect>
       <x>20</x>
       <y>150</y>
-      <width>591</width>
-      <height>201</height>
+      <width>701</width>
+      <height>251</height>
      </rect>
     </property>
    </widget>
@@ -162,26 +162,6 @@
      <string>Cancel</string>
     </property>
    </widget>
-   <widget class="QListView" name="contacts_listView">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>150</y>
-      <width>101</width>
-      <height>201</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>360</y>
-      <width>701</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -196,7 +176,9 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionBackup"/>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionCancel"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -213,7 +195,7 @@
     <addaction name="actionFont_Color"/>
     <addaction name="actionText_Highlight_COlor"/>
     <addaction name="separator"/>
-    <addaction name="actionAttach"/>
+    <addaction name="actionAttachments"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -247,7 +229,7 @@
    <addaction name="actionFont_Color"/>
    <addaction name="actionText_Highlight_COlor"/>
    <addaction name="separator"/>
-   <addaction name="actionAttach"/>
+   <addaction name="actionAttachments"/>
   </widget>
   <action name="actionCopy">
    <property name="icon">
@@ -275,9 +257,6 @@
    <property name="text">
     <string>Cut</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+C</string>
-   </property>
   </action>
   <action name="actionRedo">
    <property name="icon">
@@ -287,9 +266,6 @@
    <property name="text">
     <string>Redo</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+Shift+Z</string>
-   </property>
   </action>
   <action name="actionUndo">
    <property name="icon">
@@ -298,9 +274,6 @@
    </property>
    <property name="text">
     <string>Undo</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Z</string>
    </property>
   </action>
   <action name="actionFont">
@@ -334,22 +307,24 @@
    <property name="text">
     <string>About Us</string>
    </property>
-   <property name="shortcut">
-    <string>F1</string>
-   </property>
   </action>
-  <action name="actionBackup">
-   <property name="text">
-    <string>Backup</string>
-   </property>
-  </action>
-  <action name="actionAttach">
+  <action name="actionAttachments">
    <property name="icon">
     <iconset resource="resource.qrc">
      <normaloff>:/img/images/attach.png</normaloff>:/img/images/attach.png</iconset>
    </property>
    <property name="text">
     <string>Attachments</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionCancel">
+   <property name="text">
+    <string>Cancel</string>
    </property>
   </action>
  </widget>

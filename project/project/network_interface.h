@@ -1,8 +1,6 @@
 #ifndef NETWORK_INTERFACE_H
 #define NETWORK_INTERFACE_H
 
-
-
 /*
 //TODO :
 #define PORT 8080
@@ -21,4 +19,5 @@ private:
     virtual ~Network_Interface();
 };
 */
+
 #endif // NETWORK_INTERFACE_H

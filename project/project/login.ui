@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>login_diag</class>
- <widget class="QDialog" name="login_diag">
+ <class>login</class>
+ <widget class="QDialog" name="login">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>login</string>
+   <string>LogIn</string>
   </property>
   <widget class="QLabel" name="username">
    <property name="geometry">
@@ -71,8 +71,14 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
    <property name="placeholderText">
-    <string notr="true"/>
+    <string/>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
    </property>
   </widget>
   <widget class="QPushButton" name="login_pushButton">
@@ -100,50 +106,6 @@
    <property name="text">
     <string>Create New Account?</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>60</y>
-     <width>261</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout"/>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>261</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>140</y>
-     <width>161</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout"/>
-  </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>301</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout"/>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

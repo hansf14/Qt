@@ -1,12 +1,6 @@
 #ifndef COMPOSE_H
 #define COMPOSE_H
 
-#include <QFontDialog>
-#include <QFont>
-#include <QColorDialog>
-#include <QColor>
-#include <QMessageBox>
-#include <QFileDialog>
 #include <QMainWindow>
 
 namespace Ui {
@@ -40,10 +34,17 @@ private slots:
 
     void on_actionAbout_Us_triggered();
 
-    void on_actionAttach_triggered();
+    void on_cancel_pushButton_clicked();
+
+    void on_actionAttachments_triggered();
+
+    void on_actionCancel_triggered();
+
+    void on_actionNew_triggered();
 
 private:
     Ui::compose *ui;
+    compose *compose1;
 };
 
 #endif // COMPOSE_H
