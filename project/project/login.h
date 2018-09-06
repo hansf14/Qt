@@ -4,15 +4,20 @@
 #include <QDialog>
 #include "signup.h"
 #include "mail_window.h"
+#include "mail_dialog.h"
+
 namespace Ui {
 class login;
 }
 class mail_window;
-class login : public QDialog
+class login : public MailDialog
 {
     Q_OBJECT
     
 public:
+    //TODO
+    User user;
+
     explicit login(QWidget *parent = 0);
     ~login();
     

@@ -1,16 +1,17 @@
 #ifndef EMAIL_UI_H
 #define EMAIL_UI_H
 
+#include <QStringList>
 #include "user.h"
-#include <queue>
-#include <fstream>
+#include "client_socket.h"
 
 enum MailLocation
 {
-    Inbox,
-    Sent,
-    Draft,
-    Trash
+    UNKNOWN,
+    INBOX,
+    SENT,
+    DRAFT,
+    TRASH
 };
 
 struct Sender
@@ -28,7 +29,20 @@ struct Receiver
 class Mail
 {
 public:
+    Mail(User a_user);
+    virtual ~Mail();
 
+    //TODO : more args
+    void set(MailLocation a_location, Sender a_sender, Receiver a_receiver,
+             QString a_subject, QString a_contents);
+    //general send
+    int send();
+    //cc (chao song)
+    int send_cc();
+    //bcc (mi song)
+    int send_bcc();
+    //forwarto
+    int forward();
 protected:
     MailLocation location;
     Sender sender;
@@ -41,23 +55,13 @@ protected:
     bool checked; //receiver checked the mail
     QString date_checked; //the date receiver checked the mail
     QStringList attachments; //the file attachments
-
-public:
-    //general send
-    int send();
-    //cc (chao song)
-    int cc();
-    //bcc (mi song)
-    int bcc();
-    //forwarto
-    int forward();
 };
 
 class EmailMgr //Eamil Manager (Client)
 {
 protected:
-    queue<Mail> toServer;
-    queue<Mail> fromServer;
+    //queue<Mail> toServer;
+    //queue<Mail> fromServer;
 };
 
 #endif // EMAIL_UI_H

@@ -2,6 +2,7 @@
 #define COMPOSE_H
 
 #include <QMainWindow>
+#include "email_ui.h"
 
 namespace Ui {
 class compose;
@@ -41,6 +42,8 @@ private slots:
     void on_actionCancel_triggered();
 
     void on_actionNew_triggered();
+
+    void on_send_pushButton_clicked();
 
 private:
     Ui::compose *ui;

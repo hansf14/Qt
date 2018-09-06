@@ -28,6 +28,7 @@ public:
 
     void setServer(char const *a_server_ip, short int a_port);
     int connect();
+    int disconnect();
     int send(void *contents, int len);
     int recv(void *contents, int len);
     //int send(void *contents, int len, int flags);

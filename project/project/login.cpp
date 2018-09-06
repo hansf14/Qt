@@ -4,7 +4,7 @@
 #include "mail_window.h"
 
 login::login(QWidget *parent) :
-    QDialog(parent),
+    MailDialog(parent),
     ui(new Ui::login)
 {
     ui->setupUi(this);
@@ -28,6 +28,8 @@ void login::on_login_pushButton_clicked()
 
     if(username == "admin" && password == "123")
     {
+        user.set(username, password);
+
         QMessageBox::information(this,"LogIn","LogIn succesfull!");
         hide();
         Mail_Window = new mail_window(this);

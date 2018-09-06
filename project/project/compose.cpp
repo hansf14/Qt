@@ -98,3 +98,19 @@ void compose::on_actionNew_triggered()
     compose1 = new compose;
     compose1->show();
 }
+
+void compose::on_send_pushButton_clicked()
+{
+    //TODO
+//    Mail mail;
+//    mail.set(MailLocation::SENT)
+//    mail.sender.username = "admin";
+//    mail.sender.email = "admin@abcd.com";
+
+//    mail.receiver.username = mail.receiver.username = ui->to_lineEdit->text();
+//    //mail.receiver.email
+//    mail.contents = ui->textEdit->toPlainText();
+//    //Or html format text//ui->textEdit->toHtml();
+
+
+}

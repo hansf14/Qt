@@ -23,7 +23,9 @@ SOURCES += main.cpp\
     inbox_window.cpp \
     client_socket.cpp \
     network_interface.cpp \
-    user.cpp
+    user.cpp \
+    email_ui.cpp \
+    mail_dialog.cpp
 
 HEADERS  += login.h \
     signup.h \
@@ -36,7 +38,8 @@ HEADERS  += login.h \
     client_socket.h \
     network_interface.h \
     user.h \
-    email_ui.h
+    email_ui.h \
+    mail_dialog.h
 
 FORMS    += login.ui \
     signup.ui \

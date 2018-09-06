@@ -27,19 +27,24 @@ ClientSocket::~ClientSocket()
 
 int ClientSocket::connect()
 {
-    printf("Connecting to server...\n");
+    //printf("Connecting to server...\n");
     if(::connect(socket_fd, (struct sockaddr *)&server_ip, sizeof(server_ip)) < 0)
     {
          sys_err("Connect failed !");
          return -1;
     }
-    printf("Connecting to server...OK\n");
+    //printf("Connecting to server...OK\n");
     return 0;
+}
+
+int ClientSocket::disconnect()
+{
+    return close(socket_fd);
 }
 
 int ClientSocket::send(void *contents, int len)
 {
-       return  write(socket_fd, contents, len);
+    return  write(socket_fd, contents, len);
 }
 
 int ClientSocket::recv(void *contents, int len)
