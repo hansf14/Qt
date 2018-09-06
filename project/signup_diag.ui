@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>signup</class>
- <widget class="QDialog" name="signup">
+ <class>signup_diag</class>
+ <widget class="QDialog" name="signup_diag">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>SignUp</string>
+   <string>Dialog</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>30</y>
      <width>331</width>
-     <height>231</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="title">
@@ -29,54 +29,28 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>21</y>
+      <y>20</y>
       <width>311</width>
-      <height>189</height>
+      <height>161</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QFormLayout" name="formLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="username">
+      <widget class="QLabel" name="fullname">
        <property name="font">
         <font>
          <pointsize>11</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>UserName</string>
+        <string>Full Name*</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1" colspan="2">
-      <widget class="QLineEdit" name="username_lineEdit"/>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name_lineEdit"/>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="gender_label">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Gender*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QRadioButton" name="male_radioButton">
-       <property name="text">
-        <string>Male</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QRadioButton" name="female_radioButton">
-       <property name="text">
-        <string>Female</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
       <widget class="QLabel" name="email">
        <property name="font">
         <font>
@@ -88,10 +62,10 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1" colspan="2">
+     <item row="1" column="1">
       <widget class="QLineEdit" name="email_lineEdit"/>
      </item>
-     <item row="3" column="0">
+     <item row="2" column="0">
       <widget class="QLabel" name="password">
        <property name="font">
         <font>
@@ -103,10 +77,10 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="2">
+     <item row="2" column="1">
       <widget class="QLineEdit" name="password_lineEdit"/>
      </item>
-     <item row="4" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="confirmpass">
        <property name="font">
         <font>
@@ -118,10 +92,10 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="1" colspan="2">
+     <item row="3" column="1">
       <widget class="QLineEdit" name="confirm_lineEdit"/>
      </item>
-     <item row="5" column="0">
+     <item row="4" column="0">
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
@@ -133,7 +107,7 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="1" colspan="2">
+     <item row="4" column="1">
       <widget class="QLineEdit" name="phone_lineEdit"/>
      </item>
     </layout>
@@ -145,7 +119,7 @@
      <x>350</x>
      <y>30</y>
      <width>331</width>
-     <height>221</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="title">
@@ -156,7 +130,7 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>271</width>
+      <width>181</width>
       <height>17</height>
      </rect>
     </property>
@@ -166,14 +140,14 @@
      </font>
     </property>
     <property name="text">
-     <string>You can use letters, numbers</string>
+     <string>First Name Last Name</string>
     </property>
    </widget>
    <widget class="QLabel" name="email_label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
+      <y>60</y>
       <width>321</width>
       <height>17</height>
      </rect>
@@ -191,7 +165,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>130</y>
+      <y>100</y>
       <width>341</width>
       <height>17</height>
      </rect>
@@ -209,7 +183,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>120</y>
       <width>221</width>
       <height>17</height>
      </rect>
@@ -227,7 +201,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>190</y>
+      <y>160</y>
       <width>251</width>
       <height>17</height>
      </rect>
@@ -245,8 +219,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>250</y>
+     <x>300</x>
+     <y>220</y>
      <width>85</width>
      <height>27</height>
     </rect>
@@ -258,14 +232,14 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>300</x>
      <y>250</y>
      <width>85</width>
      <height>27</height>
     </rect>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>Cancel</string>
    </property>
   </widget>
  </widget>

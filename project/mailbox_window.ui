@@ -1,85 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>draft_window</class>
- <widget class="QMainWindow" name="draft_window">
+ <class>mailbox_window</class>
+ <widget class="QMainWindow" name="mailbox_window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>790</width>
-    <height>407</height>
+    <height>405</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>50</y>
-      <width>161</width>
-      <height>27</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>81</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Newest</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Oldest</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Unread</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="search_label">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>40</y>
-      <width>56</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Search :</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>391</width>
+      <width>421</width>
       <height>41</height>
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="compose_pushButton_3">
+    <widget class="QPushButton" name="compose_pushButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -92,7 +39,7 @@
       <string>Compose</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="refresh_pushButton_3">
+    <widget class="QPushButton" name="refresh_pushButton">
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -108,7 +55,7 @@
       <string>Refresh</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="archive_pushButton_3">
+    <widget class="QPushButton" name="archive_pushButton">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -121,7 +68,7 @@
       <string>Archive</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="move_pushButton_3">
+    <widget class="QPushButton" name="move_pushButton">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -134,7 +81,7 @@
       <string>Move to...</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="delete_pushButton_3">
+    <widget class="QPushButton" name="delete_pushButton">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -147,7 +94,7 @@
       <string>Delete</string>
      </property>
     </widget>
-    <widget class="Line" name="line_4">
+    <widget class="Line" name="line_2">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -160,7 +107,7 @@
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
-    <widget class="Line" name="line_5">
+    <widget class="Line" name="line_3">
      <property name="geometry">
       <rect>
        <x>70</x>
@@ -173,44 +120,17 @@
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_2">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>220</y>
-      <width>571</width>
-      <height>131</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>80</y>
-      <width>571</width>
-      <height>131</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="view_label">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>46</y>
-      <width>56</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>View :</string>
-    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>0</y>
+       <width>521</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
@@ -231,7 +151,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="title">
      <string/>
     </property>
-    <widget class="QTreeView" name="menu_2">
+    <widget class="QTreeView" name="menu">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -241,7 +161,7 @@ background-color: rgb(255, 255, 255);</string>
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="inbox_pushButton_3">
+    <widget class="QPushButton" name="inbox_pushButton">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -265,7 +185,7 @@ background-color: rgb(255, 255, 255);</string>
       <string>Inbox</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="sent_pushButton_3">
+    <widget class="QPushButton" name="sent_pushButton">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -286,7 +206,7 @@ background-color: rgb(255, 255, 255);</string>
       <string>Sent</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="draft_pushButton_3">
+    <widget class="QPushButton" name="draft_pushButton">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -307,7 +227,7 @@ background-color: rgb(255, 255, 255);</string>
       <string>Draft</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="trash_pushButton_3">
+    <widget class="QPushButton" name="trash_pushButton">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -342,6 +262,31 @@ background-color: rgb(255, 255, 255);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>50</y>
+      <width>81</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Newest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Oldest</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Unread</string>
+     </property>
+    </item>
+   </widget>
    <widget class="QLabel" name="menu_label">
     <property name="geometry">
      <rect>
@@ -362,17 +307,70 @@ background-color: rgb(255, 255, 255);</string>
      <string>Menu</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="logout_pushButton3">
+   <widget class="QLabel" name="view_label">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>10</y>
-      <width>81</width>
+      <x>210</x>
+      <y>46</y>
+      <width>56</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>View :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="search_label">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>40</y>
+      <width>56</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Search :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="search_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>50</y>
+      <width>161</width>
       <height>27</height>
      </rect>
     </property>
-    <property name="text">
-     <string>LogOut</string>
+   </widget>
+   <widget class="QTextBrowser" name="mailList_textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>80</y>
+      <width>571</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="mailContents_textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>220</y>
+      <width>571</width>
+      <height>131</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -385,8 +383,45 @@ background-color: rgb(255, 255, 255);</string>
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout_Us"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
   <action name="actionAbout_Us">
    <property name="text">
     <string>About Us</string>
